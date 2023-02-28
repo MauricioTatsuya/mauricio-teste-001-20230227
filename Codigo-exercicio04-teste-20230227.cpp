@@ -17,7 +17,10 @@ Escreva um programa na linguagem que desejar onde calcule o percentual de repres
 
 #include <iostream>
 #include <math.h>
+#include <iomanip>
 using namespace std;
+using std::cout; using std::endl;
+using std::setprecision; using std::fixed;
 int main()
 {
   float SP, RJ, MG, ES, Outros, Total;
@@ -28,26 +31,17 @@ MG = 29229,88;
 ES = 27165,48;
 Outros = 19849,53;
 Total = SP + RJ + MG + ES + Outros;
-cout<<"O percentual de representacao de SP dentro do valor total foi de: R$ ";
-cout<<fixed;
-
-cout<<(SP/Total)*100;
-cout<<" \n";
-cout<<"O percentual de representacao de RJ dentro do valor total foi de: R$ ";
-cout<<fixed;
-cout<<(RJ/Total)*100;
-cout<<" \n";
-cout<<"O percentual de representacao de MG dentro do valor total foi de: R$ ";
-cout<<fixed;
-cout<<(MG/Total)*100;
-cout<<" \n";
-cout<<"O percentual de representacao de ES dentro do valor total foi de: R$ ";
-cout<<fixed;
-cout<<(ES/Total)*100;
-cout<<" \n";
-cout<<"O percentual de representacao dos Outros estados dentro do valor total foi de: R$ ";
-cout<<fixed;
-cout<<(Outros/Total)*100;
+cout<<"\n ";
+cout<<"O percentual de representacao de SP dentro do valor total foi de:               ";
+cout << setprecision(2) << fixed << (SP/Total)*100 << "%\n ";
+cout<<"O percentual de representacao de RJ dentro do valor total foi de:               ";
+cout << setprecision(2) << fixed << (RJ/Total)*100 << "%\n ";
+cout<<"O percentual de representacao de MG dentro do valor total foi de:               ";
+cout << setprecision(2) << fixed << (MG/Total)*100 << "%\n ";
+cout<<"O percentual de representacao de ES dentro do valor total foi de:               ";
+cout << setprecision(2) << fixed << (ES/Total)*100 << "%\n ";
+cout<<"O percentual de representacao dos Outros estados dentro do valor total foi de:  ";
+cout << setprecision(2) << fixed << (Outros/Total)*100 << "%\n ";
 return 0;
 }
 
